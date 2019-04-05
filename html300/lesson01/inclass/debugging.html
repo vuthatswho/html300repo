@@ -6,7 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script type="text/javascript">
+
     myArray = [13,25,10,43,435];
+
+    let over50 = myArray.filter(function(value){
+      return value > 50;
+    })
+
+    console.log('Here is the aray for every number above 50 ${over50}');
+
+    for(let index = 4; index < myArray.length; index++){
+      if(myArray[index] > 50){
+        iabove50.push(myArray[index])
+      }
+    }
     for(let i = 0; index < myArray.length -1; index++){
       console.log(myArray[index]);
     }
@@ -16,21 +29,17 @@
     }
     console.log(myArray + 'Each number should 15 greater than before the loop');
 
-    var isAbove30 = true;
-    for(let index = 1; index < myArray.length; index++){
-      if(myArray[index] < 30){
-        isAbove30 = false;
-      }
+    let below30 = myArray.every(function value){
+      return value < 30;
     }
-    console.log("Every number is above 30 is " + isAbove30);
+    // var isAbove30 = true;
+    // for(let index = 1; index < myArray.length; index++){
+    //   if(myArray[index] < 30){
+    //     isAbove30 = false;
+    //   }
+    // }
+    console.log('Every number is above 30 is ${below30}');
 
-    console.log("Creating an array for every number above 50");
-    above50 = [];
-    for(let index = 4; index < myArray.length; index++){
-      if(myArray[index] > 50){
-        iabove50.push(myArray[index])
-      }
-    }
     console.log("Here is the array for every number above 50 " + above50);
 
     myArray2 = [13,25,10,43,435];
