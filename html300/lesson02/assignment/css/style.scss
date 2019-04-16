@@ -4,3 +4,61 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+h1 {
+  color: $primary-grey;
+  padding-left: 1.3rem;
+}
+
+h2 {
+  padding-top: 0.2rem;
+  padding-left: 2rem;
+  font-size: 14px;
+  float: left;
+}
+
+p {
+  float: left;
+  padding-left: 0.5rem;
+}
+
+#job-type {
+  font-style: italic;
+  color: $primary-grey;
+  padding-left: 3rem;
+  margin: 0;
+}
+
+.main {
+  padding: 2rem;
+  width: 100%;
+}
+
+.left-section {
+  float: left;
+  width: 25%;
+  //border: solid red;
+  &..default-picture {
+    border: 0;
+    border-radius: 50%;
+    width: 60%;
+    height: auto;
+  }
+}
+
+.right-section {
+  background-color: lighten($background-grey, 10%);
+  display: flex;
+  flex-flow: column;
+  float: left;
+  width: 60%;
+  //border: solid blue;
+  &.column {
+    height: auto;
+  }
+}
+
+#linkedin-icon {
+  float: left;
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+}
