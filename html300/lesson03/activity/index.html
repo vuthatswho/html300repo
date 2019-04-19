@@ -9,5 +9,28 @@
 <body>
 	<h1>Hey!</h1>
 	<p>Check the console for the output!</p>
+	<script>
+	class Dog {
+	  constructor(Name, Age, Breed, Color, barkLevel, energyLevel){
+	  this.Name = Name;
+	  this.Age = Age;
+	  this.Breed = Breed;
+	  this.Color = Color;
+	  this.barkLevel = barkLevel;
+	  this.energyLevel = energyLevel;
+	}
+
+	patMethod(){
+	  return this.energyLevel++;
+	  }
+	}
+
+	const myDog = new Dog('Tom', '12', 'Shiba Inu', 'red', 2, 5);
+	debugger;
+	console.log(myDog);
+	myDog.patMethod();
+	console.log(myDog);
+
+	</script>
 </body>
 </html>
