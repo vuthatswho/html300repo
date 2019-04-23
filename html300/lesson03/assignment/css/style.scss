@@ -4,3 +4,71 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+@mixin floatLeft {
+  float:left;
+}
+
+@mixin displayFlex {
+  display: flex;
+}
+
+h1 {
+  color: $primary-grey;
+  padding-left: 1.3rem;
+}
+
+h2 {
+  padding-top: 0.2rem;
+  padding-left: 2rem;
+  font-size: 14px;
+  @include floatLeft;
+}
+
+p {
+  @include floatLeft;
+  padding-left: 0.5rem;
+}
+
+#job-type {
+  font-style: italic;
+  color: $primary-grey;
+  padding-left: 3rem;
+  margin: 0;
+}
+
+.main {
+  padding: 2rem;
+  width: 100%;
+}
+
+.left-section {
+  @include floatLeft;
+  width: 25%;
+  //border: solid red;
+  &..default-picture {
+    border: 0;
+    border-radius: 50%;
+    width: 60%;
+    height: auto;
+  }
+}
+
+.right-section {
+  background-color: lighten($background-grey, 10%);
+  @include displayFlex;
+  flex-flow: column;
+  @include floatLeft;
+  width: 60%;
+  //border: solid blue;
+  &.column {
+    height: auto;
+  }
+}
+
+#linkedin-icon {
+  @include floatLeft;
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+}
+
+//test
