@@ -4,6 +4,14 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+@mixin floatLeft {
+  float:left;
+}
+
+@mixin displayFlex {
+  display: flex;
+}
+
 h1 {
   color: $primary-grey;
   padding-left: 1.3rem;
@@ -13,11 +21,11 @@ h2 {
   padding-top: 0.2rem;
   padding-left: 2rem;
   font-size: 14px;
-  float: left;
+  @include floatLeft;
 }
 
 p {
-  float: left;
+  @include floatLeft;
   padding-left: 0.5rem;
 }
 
@@ -34,7 +42,7 @@ p {
 }
 
 .left-section {
-  float: left;
+  @include floatLeft;
   width: 25%;
   //border: solid red;
   &..default-picture {
@@ -47,9 +55,9 @@ p {
 
 .right-section {
   background-color: lighten($background-grey, 10%);
-  display: flex;
+  @include displayFlex;
   flex-flow: column;
-  float: left;
+  @include floatLeft;
   width: 60%;
   //border: solid blue;
   &.column {
@@ -58,7 +66,9 @@ p {
 }
 
 #linkedin-icon {
-  float: left;
+  @include floatLeft;
   padding-top: 0.5rem;
   padding-left: 2rem;
 }
+
+//test
